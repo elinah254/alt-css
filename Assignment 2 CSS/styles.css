@@ -89,19 +89,6 @@ main {
 }
 
     .yellow-text {
-            /* width: 398px;
-            height: 60px;
-            top: 462px;
-            left: 232px;
-            background-color: #FFBF00; 
-            border-bottom: 8px solid #CC9900; 
-            border-radius: 5px; 
-            display: inline-block; 
-            color: black; 
-            font-weight: bold;
-            padding: 3px 15px;  */
-
-
         background-color: #d4aa00; 
         color: black; 
         font-weight: bold;
@@ -114,11 +101,7 @@ main {
         left: 264px;
     
 
-        /* background-size:width: 398;
-height: 60;
-top: 462px;
-left: 232px;
-border-bottom-width: 8px; */
+        
 
     }
     

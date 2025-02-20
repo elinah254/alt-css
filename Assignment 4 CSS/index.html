@@ -1,151 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            /* background-color: #f8f9fa; */
-            background-color:  rgb(247, 253, 252);
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 460px;
-            height: 275px;
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <style>
     
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgb(247, 253, 252);
+    }
 
-        }
+    /*This  Container holds both info section and the form section side by side */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto;             
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
 
-        .info-section {
-            flex: 1;
-            padding: 2rem;
-            background-color: #eafaf7;
-            Width: 580px;
-            height: 679px;
-        }
+    /* This is the Left side info */
+    .info-section {
+      flex: 1;                      
+      padding: 3rem;
+      background-color: #eafaf7;      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;        
+    }
 
-        .info-section h2 {
-            color: #0d6efd;
-        }
+    /* The logo of the company */
+    .info-section img {
+      max-width: 80px;               
+      margin-bottom: 1rem;
+    }
 
-        .info-section p {
-            color: #495057;
-        }
+    .info-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0d6efd;
+    }
 
-        .form-section {
-            flex: 1;
-            padding: 2rem;
-        }
+    .info-section p {
+      color: #495057;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+    /* This is the Right side form */
+    .form-section {
+      flex: 1;                       
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-        label {
-            font-size: 14px;
-            margin-bottom: 5px;
-            color: #495057;
-        }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;                     
+    }
 
-        input, select {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ced4da;
-            border-radius: 4px;
-            font-size: 14px;
-        }
+    label {
+      font-size: 14px;
+      color: #495057;
+    }
 
-        button {
-            padding: 10px;
-            background-color: #0d6efd;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      font-size: 14px;
+    }
 
-        button:hover {
-            background-color: #0056b3;
-        }
+    button {
+      padding: 10px;
+      background-color: #0d6efd;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-        .terms {
-            font-size: 12px;
-            color: #6c757d;
-            text-align: center;
-        }
+    button:hover {
+      background-color: #0056b3;
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-        }
-    </style>
+    .terms {
+      font-size: 12px;
+      color: #6c757d;
+      text-align: center;
+    }
+
+    /*Adding  Responsive adjustments to it */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;  
+      }
+      .info-section, .form-section {
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="info-section">
-            <h2>For Individuals</h2>
-            <p>Start benefiting from the wellness experience. For companies looking to increase productivity and improve organization wellness.</p>
-        </div>
-        <div class="form-section">
-            <form>
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
 
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
-
-                <label for="gender">Gender</label>
-                <select id="gender" name="gender">
-                    <option value="">Select here</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob">
-
-                <label for="height">Height (cm)</label>
-                <input type="number" id="height" name="height" placeholder="Enter height in cm">
-
-                <label for="weight">Weight (kg)</label>
-                <input type="number" id="weight" name="weight" placeholder="Enter weight in kg">
-
-                <label for="activity-level">Activity Level</label>
-                <select id="activity-level" name="activity-level">
-                    <option value="">Select here</option>
-                    <option value="low">Low</option>
-                    <option value="moderate">Moderate</option>
-                    <option value="high">High</option>
-                </select>
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password">
-
-                <button type="submit">Register</button>
-                <p class="terms">By clicking Register, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.</p>
-            </form>
-        </div>
+  <div class="container">
+    <!-- This is my Left Info Section -->
+    <div class="info-section">
+      <img src="logo.png" alt="The Company Logo"> 
+      <h2>For Individuals</h2>
+      <p>
+        Start benefiting from the wellness experience. 
+        For companies looking to increase productivity and 
+        improve organizational wellness.
+      </p>
     </div>
+
+    <!-- This is my Right Form Section -->
+    <div class="form-section">
+      <form>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+          <option value="">Select here</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" placeholder="dd/yyyy">
+
+        <label for="height">Height (cm)</label>
+        <input type="number" id="height" name="height" placeholder="Enter height in cm">
+
+        <label for="weight">Weight (kg)</label>
+        <input type="number" id="weight" name="weight" placeholder="Enter weight in kg">
+
+        <label for="activity-level">Activity Level</label>
+        <select id="activity-level" name="activity-level">
+          <option value="">Select here</option>
+          <option value="low">Low</option>
+          <option value="moderate">Moderate</option>
+          <option value="high">High</option>
+        </select>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+
+        <button type="submit">Register</button>
+
+        <p class="terms">
+          By clicking Register, you agree to our
+          <a href="#">Terms of Use</a> and our
+          <a href="#">Privacy Policy</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>
+
